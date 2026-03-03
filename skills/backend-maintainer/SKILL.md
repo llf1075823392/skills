@@ -2,13 +2,13 @@
 name: backend-maintainer
 description: 统一约束 Java 后端代码规范。只要用户请求涉及任何代码生成、代码修改、重构、补丁、数据库脚本变更、接口变更、DTO/Entity/Mapper/Service/Controller 相关开发任务，必须立即启用本 skill 并按规范执行。
 version: 1.0.0
-owner: jbkc
+owner: da li
 ---
 
 # Guard
 
 ## 目标
-- 将 JBKC 项目规范作为单一执行基线。
+- 将项目规范作为单一执行基线。
 - 在实现需求时优先保证分层边界、接口契约、数据访问方式和可维护性。
 
 ## 使用时机
@@ -77,7 +77,7 @@ owner: jbkc
 
 ### 9. 代码生成与基础设施
 - 涉及表结构/实体/Mapper/Service/XML 缺失时，对话中不直接手写生成结果。
-- 必须使用生成器：`lw-jbkc/src/test/java/generator/JbkcCodeGenerator.main()`。
+- 必须使用生成器：src/test/java/generator/JbkcCodeGenerator.main()`。
 - Redis 禁止二次封装 `RedisUtil/RedisService` 等。
 - 必须直接使用 Redisson 原生 API（`RedissonClient + getBucket/getMap/getLock...`）。
 - 测试统一使用 Spring Boot 单元测试体系。
