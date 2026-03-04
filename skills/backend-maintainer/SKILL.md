@@ -40,6 +40,7 @@ owner: da li
 - 单表场景（CRUD/分页/条件查询/条件更新/逻辑删除）禁止写 XML、禁止手写 SQL。
 - 统一使用 MyBatis-Plus：`LambdaQueryWrapper`、`LambdaUpdateWrapper`、`lambdaQuery()`、`lambdaUpdate()`、MyBatis-Plus 分页能力。
 - 只有确因性能或功能无法满足时，才允许 SQL/XML；需要在输出中说明理由。
+- 有删除操作时，直接使用 MyBatis-Plus 的 `remove` 方法进行逻辑删除，禁止使用 `update` 方法设置逻辑删除字段。
 
 ### 4. 对象转换
 - 必须使用 MapStruct。
